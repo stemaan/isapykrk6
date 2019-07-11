@@ -1,0 +1,1 @@
+WITHDRAW_FEE = 0.01
