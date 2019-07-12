@@ -1,9 +1,8 @@
 # Dziedziczenie Diamentowe
 
 # nasza glowna klasa
-class Zwierze:
+class Zwierze(object):
     '''Glowna klasa'''
-
     def __init__(self, imie):
         '''Inicjalizuje nowa instancje
         imie - str
@@ -23,7 +22,6 @@ class Zwierze:
 
 class Kon(Zwierze):
     '''Klasa pochodna od Zwierze'''
-
     def __init__(self, imie):
         '''Inicjalizuje nowa instancje Kon'''
 
@@ -47,7 +45,6 @@ class Kon(Zwierze):
 
 class Osiol(Zwierze):
     '''Klasa potomna Zwierze'''
-
     def __init__(self, imie):
         '''Inicjalizuje nowy obiekt Osiol.
         PyCharm podkresla nazwe, poniewaz sugeruje abysmy uzyli konstruktor z klasy bazowej'''
@@ -61,7 +58,6 @@ class Osiol(Zwierze):
         '''Metoda specyficzna dla klasy Osiol'''
         print('Ja nie biegam, jestem oslem')
 
-
 class Mul(Osiol, Kon):
     '''Mul dziedziczy od Osiol i Kon
 
@@ -73,7 +69,6 @@ class Mul(Osiol, Kon):
         print('Jestem mułem, ale też mówię jak moj rodzic super(): ', end='')
         # Mul skorzysta z metody mowi() rodzica, pierwszego w ktorym bedzie ta metoda
         super().mowi()
-
 
 print('\nZwierzak: ------------------')
 # tworzymy instancje Zwierze
@@ -102,3 +97,9 @@ mul1.mowi()
 # a tu korzystamy z metod obu rodzicow
 mul1.skacz()
 mul1.biegnij()
+
+
+
+
+
+
